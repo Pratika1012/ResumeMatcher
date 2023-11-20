@@ -11,7 +11,7 @@ import base64
 
 # Set your OpenAI API key here
 with st.sidebar:
-    openai.api_key = st.text_input("Add your OpenAI API key", type = "password")
+    openai.api_key = st.text_input("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", type = "password")
 data=[]
 
 # Function to calculate similarity ratio between strings
