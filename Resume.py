@@ -31,7 +31,7 @@ def get_completion(prompt, model="gpt-3.5-turbo-16k"):
 
 st.title("Resume Matcher")
 
-job_description= st.text_area("Enter Job Description")
+# job_description= st.text_area("Enter Job Description")
 # File upload for job description
 job_description_file = st.file_uploader("Upload Job Description", type=["txt", "pdf", "docx"])
 
@@ -105,7 +105,7 @@ if st.button("Generate Report") and (job_description_file or job_description) is
         # Calculate percentage
         # match_percentage = int(match_rating * 100)
 
-        data.append({"Name":resume_file.name ,"Match percentage":generated_resume})
+        data.append({"Name":resume_file.name ,"Summary-Match Percentage":generated_resume})
         i=i+1
     df = pd.DataFrame(data)
     st.write(df)
